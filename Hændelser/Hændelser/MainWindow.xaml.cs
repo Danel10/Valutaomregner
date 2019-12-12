@@ -77,7 +77,7 @@ namespace Hændelser
 
         void jpyt_Click(object sender, RoutedEventArgs e)
         {
-            cur = 16.08f;
+            cur = 16.07f;
             regn.Content = "Du regner nu fra DKK til JPY";
             curss = " ¥";
         }
