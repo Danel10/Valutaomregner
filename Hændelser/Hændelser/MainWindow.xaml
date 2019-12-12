@@ -1,0 +1,41 @@
+﻿<Window x:Class="Hændelser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hændelser"
+        mc:Ignorable="d"
+        Title="Currency Exchange" Height="440" Width="790">
+
+
+    <Grid>
+        <!-- Udregnings billede -->
+        <Image HorizontalAlignment="Left" Height="360" Margin="420,73,0,0" VerticalAlignment="Top" Width="370" Source="Megumin_Sign.jpg"/>
+
+        <!-- Text felt for tal -->
+        <TextBox Grid.Row="0" Name="input" Margin="45,217,573,162" Text="0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Name="submit" Margin="45,294,573,0" Click="submit_Click" VerticalAlignment="Top" Height="71">Beregn</Button>
+        <Label Name="output" Margin="442,221,234,167" RenderTransformOrigin="0.502,0.564" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">...</Label>
+
+        <!-- Knapper for skift mellem valuta -->
+        <Button Content="EUR -> DKK" Name="eurotdkk" Click="euro_Click" HorizontalAlignment="Left" Margin="260,345,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70"/>
+        <Button Content="USD -> DKK" Name="usdtdkk" Click="usd_Click" HorizontalAlignment="Left" Margin="260,320,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70"/>
+        <Button Content="JPY -> DKK" Name="jpytdkk" Click="jpy_Click" HorizontalAlignment="Left" Margin="260,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70"/>
+
+        <Button Content="DKK -> EUR" Name="dkkteur" Click="eurot_Click" HorizontalAlignment="Left" Margin="340,345,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70"/>
+        <Button Content="DKK -> USD" Name="dkktusd" Click="usdt_Click" HorizontalAlignment="Left" Margin="340,320,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70"/>
+        <Button Content="DKK -> JPY" Name="dkktjpy" Click="jpyt_Click" HorizontalAlignment="Left" Margin="340,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70"/>
+
+        <Label Name="regn" HorizontalAlignment="Left" Margin="45,147,0,0" VerticalAlignment="Top" Width="248" Content="Vælg hvad du vil regne i?" Height="50" VerticalContentAlignment="Center" FontSize="16"/>
+        <ListBox SelectionChanged="ListBox_SelectionChanged" Margin="260,202,380,162">
+            <ListBoxItem>JPY -> DKK</ListBoxItem>
+            <ListBoxItem>USD -> DKK</ListBoxItem>
+            <ListBoxItem>EUR -> DKK</ListBoxItem>
+            <ListBoxItem>DKK -> JPY</ListBoxItem>
+            <ListBoxItem>DKK -> USD</ListBoxItem>
+            <ListBoxItem>DKK -> EUR</ListBoxItem>
+        </ListBox>
+
+    </Grid>
+
+</Window>
