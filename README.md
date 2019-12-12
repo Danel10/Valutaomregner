@@ -1,0 +1,2 @@
+# Valutaomregner
+Omregner
